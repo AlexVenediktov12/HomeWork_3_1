@@ -3,24 +3,13 @@ package ru.geekbrains.HomeWork_3_1;
 import java.util.ArrayList;
 
 public class Box<T> { // пункт b
-    private T fruit;
 
-    public Box(T fruit) {
-        this.fruit = fruit;
-
-    }
-    public T getBox() {
-        return fruit;
-    }
-    public void setBox(T fruit) {
-        this.fruit = fruit;
-    }
     ArrayList<T> arrayList = new ArrayList<>(); // пункт с
-    public void addFruitToBox(T fruit) { // пункт g
-        arrayList.add(fruit);
-    }
-//    public float getWeight(Apple apple) { // пункт d
-//        return (apple.WEIGHT * arrayList.size());
+//    public void addFruitToBox(T fruit) { // пункт g
+//        arrayList.add(fruit);
+//    }
+//    public float getWeight(Fruit fruit) { // пункт d
+//        return (fruit.WEIGHT * arrayList.size());
 //    }
 //    public float getWeight(Box<T> fruit) { // пункт d
 //        return (fruit.WEIGHT * arrayList.size());

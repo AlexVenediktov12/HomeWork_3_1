@@ -42,5 +42,10 @@ public class Main {
         }
         return arrayList;
     }
+    Fruit apple1 = new Apple();
+    Fruit orange1 = new Orange();
+    Fruit apple2 = new Apple();
+    Fruit orange2 = new Orange();
+
 
 }
