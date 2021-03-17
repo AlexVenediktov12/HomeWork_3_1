@@ -16,4 +16,6 @@ public class Fruit { // пункт a
     public float getWeight() {
         return weight;
     }
+
+
 }
