@@ -28,6 +28,12 @@ public class Main {
             System.out.println(array2[i]);
         }
         System.out.println(arrayToArrayList(array1));
+
+
+        Box<Fruit> box = new Box<>();
+        Box<Apple> appleBox = new Box<>();
+        appleBox.addFruitToBox(new Apple());
+        appleBox.transToAnotherBox(box);
     }
     public static void reverseArray(Object[] array, int a, int b) { // task 1
         Object flag;
@@ -42,10 +48,6 @@ public class Main {
         }
         return arrayList;
     }
-    Fruit apple1 = new Apple();
-    Fruit orange1 = new Orange();
-    Fruit apple2 = new Apple();
-    Fruit orange2 = new Orange();
 
 
 }

@@ -2,25 +2,22 @@ package ru.geekbrains.HomeWork_3_1;
 
 import java.util.ArrayList;
 
-public class Box<T> { // пункт b
+public class Box<T extends Fruit> { // пункт b
 
     ArrayList<T> arrayList = new ArrayList<>(); // пункт с
-//    public void addFruitToBox(T fruit) { // пункт g
-//        arrayList.add(fruit);
-//    }
-//    public float getWeight(Fruit fruit) { // пункт d
-//        return (fruit.WEIGHT * arrayList.size());
-//    }
-//    public float getWeight(Box<T> fruit) { // пункт d
-//        return (fruit.WEIGHT * arrayList.size());
-//    }
-//    public boolean compare(Box<T> fruit) { // пункт е
-//        if(getWeight(fruit) == getWeight(this.fruit)){
-//            return true;
-//        }
-//        else {
-//            return false;
-//        }
-//    }
+    public void addFruitToBox(T fruit) { // пункт g
+        arrayList.add(fruit);
+    }
+    public float getWeight() { // пункт d
+        return arrayList.size() * arrayList.get(0).weight;
+    }
+
+    public boolean compare(Box anotherBox) { // пункт е
+        return Math.abs(this.getWeight() - anotherBox.getWeight()) < 0.00001;
+    }
+    public void transToAnotherBox(Box<? super T> anotherBox) {
+        anotherBox.arrayList.addAll(this.arrayList);
+        this.arrayList.clear();
+    }
 
 }
